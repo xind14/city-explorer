@@ -1,7 +1,9 @@
 //used johns in class demo code
+import React, {useState} from 'react';
+import styles from './map.module.css';
 
 
-import {If,Then,Else,When} from 'react-if';
+import {When} from 'react-if';
 
 import Figure from 'react-bootstrap/Figure';
 

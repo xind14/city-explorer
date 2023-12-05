@@ -1,21 +1,16 @@
-.header {
-  text-align: center;
-  background-color:rgb(97, 165, 220);
-padding: 1em;
-margin-bottom: 50px;
-}
-
-.header h1 {
-  font-size: 60px;
-}
-
-h2 {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
+
+
+
 body {
   width: 100%;
   background-color: antiquewhite!important;
-
+flex: 1;
 }
 
 
@@ -36,7 +31,7 @@ padding-bottom: 10px;
 }
 
 
-button {
+.form-button {
   width: 20%;
  flex: 1;
  align-self: center;
@@ -49,17 +44,28 @@ button {
 }
 
 
+h2 {
+  text-align: center;
+} 
+
+
+.header {
+  text-align: center;
+  background-color:rgb(97, 165, 220);
+padding: 1em;
+margin-bottom: 50px;
+}
+
+
 
 .map  {
   background-color: rgba(0, 76, 255, 0.639);
   text-align: center;
   width: 50%;
 padding: 20px;
-margin-left: 25vw;
 
 }
 
 .figure-img {
   width: 100%;
 }
-

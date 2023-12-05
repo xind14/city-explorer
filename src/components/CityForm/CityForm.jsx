@@ -1,8 +1,9 @@
 
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import styles from "./cityform.module.css";
 
 //used johns in class demo code
 
@@ -11,14 +12,14 @@ function CityForm(props) {
   const [typedInCity, setTypedInCity] = useState('');
   const [showHeading, setShowHeading] = useState(false);
 
-  function handleChange(e) {
+  function handleChange(event) {
     console.log('handleChange called');
     setShowHeading(false);
-    setTypedInCity( e.target.value );
+    setTypedInCity( event.target.value );
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
        console.log(handleSubmit);
  
     setShowHeading(true);
@@ -28,11 +29,10 @@ function CityForm(props) {
   return (
     <>
       <Form onSubmit={handleSubmit} className='form'>
-      <Form.Group className="mb-3" controlId="formGroupCity">
         <Form.Label>What City Are You In?</Form.Label>
-        <Form.Control type="text" onChange={handleChange} placeholder="Seattle, WA" />
-      </Form.Group>
-  <Button variant="primary" type="submit" >
+        
+        <Form.Control type="text" onChange={handleChange} placeholder="Enter a city" size='lg' />
+  <Button variant="primary" type="submit" className='form-button'>
         Explore!
       </Button>
 
