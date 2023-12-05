@@ -1,0 +1,60 @@
+.header {
+  text-align: center;
+  background-color:rgb(97, 165, 220);
+padding: 1em;
+margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+}
+body {
+  width: 100%;
+}
+
+
+
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+text-align: center;
+margin: auto;
+font-size: 40px;
+background-color: rgb(231, 166, 166);
+padding-left: 5em;
+padding-right: 5em;
+padding-bottom: 10px;
+
+}
+
+
+.map  {
+  background-color: rgba(0, 76, 255, 0.639);
+  text-align: center;
+  width: 50%;
+padding: 20px;
+margin-left: 25vw;
+}
+
+.figure-img {
+  width: 100%;
+}
+
+button {
+  width: 20%;
+ flex: 1;
+ align-self: center;
+}
+.form-control {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+
+}

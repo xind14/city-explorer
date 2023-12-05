@@ -1,8 +1,10 @@
+
 import {useState} from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+//used johns in class demo code
 
 function CityForm(props) {
 
@@ -24,18 +26,24 @@ function CityForm(props) {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <>
+      <Form onSubmit={handleSubmit} className='form'>
       <Form.Group className="mb-3" controlId="formGroupCity">
         <Form.Label>What City Are You In?</Form.Label>
         <Form.Control type="text" onChange={handleChange} placeholder="Seattle, WA" />
       </Form.Group>
-      {
-        showHeading && props.city && <h2>Information about {props.city} Below</h2>
-      }
-      <Button variant="primary" type="submit" >
+  <Button variant="primary" type="submit" >
         Explore!
       </Button>
+
     </Form>
+    {
+        showHeading && props.city && <h2 style={{ fontSize: '25px' }} > Information about {props.city} Below</h2>
+      }
+    
+
+    </>
+  
   );
 }
 
