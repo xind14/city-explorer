@@ -1,22 +1,19 @@
 
 //used johns in class demo code
-
-import { useState } from 'react'
-
-import axios from 'axios';
-
-import Header from "./components/Header.jsx";
-import CityForm from "./components/CityForm.jsx";
-import Map from './components/Map.jsx';
-
-import Error from './components/Error.jsx'; 
-
-import  './App.css';
+import React, { useState } from "react";
+import axios from "axios";
+import Header from "./components/Header/Header.jsx";
+import CityForm from "./components/CityForm/CityForm.jsx";
+import Footer from './components/Footer/Footer.jsx';
+import Map from "./components/Map/Map.jsx";
+import Error from "./components/Error/Error.jsx";
+import "./App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+console.log(API_KEY);
 
 function App() {
 
@@ -24,16 +21,11 @@ function App() {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
 
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
-  function changeCity(newCity) {
-
-    getLocation(newCity);
-
-    console.log("Changing to", newCity);
-  }
 
   async function getLocation(cityName){
+      console.log(setError);
 
     let url = `https://us1.locationiq.com/v1/search?key=${API_KEY}&q=${cityName}&format=json`;
     try {
@@ -42,20 +34,40 @@ function App() {
 
       setLatitude(response.data[0].lat);
       setLongitude(response.data[0].lon);
-      setError(null);
+      setError(false);
     } catch(error) {
+      
       setError(error.message);
     }
 
   }
 
+  function changeCity(newCity) {
+
+    getLocation(newCity);
+
+    console.log("Changing to", newCity);
+  }
+
   return (
     <>
       <Header />
-      <Error error={error} onClose={() => setError(null)} />
-    
+            <Error error={error} onClose={() => setError(false)} />
+
+
       <CityForm city={city} handleChangeCity={changeCity} />
+      {latitude !== null && longitude !== null && (
+        <div>
+          <p>Latitude: {latitude},
+          Longitude: {longitude}
+
+          </p>
+        </div>
+      )}
       <Map latitude={latitude} longitude={longitude} />
+      
+      <Footer />
+
  
     </>
   )

@@ -1,0 +1,32 @@
+/* 
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+text-align: center;
+margin: auto;
+font-size: 40px;
+background-color: rgb(231, 166, 166);
+padding-left: 5em;
+padding-right: 5em;
+padding-bottom: 10px;
+
+}
+
+
+.form-button {
+  width: 20%;
+ flex: 1;
+ align-self: center;
+}
+.form-control {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+
+}
+
+
+h2 {
+  text-align: center;
+}  */
