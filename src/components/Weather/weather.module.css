@@ -1,0 +1,14 @@
+.weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: aqua;
+  height: 200px;
+  align-content: center;
+}
+
+.card{
+  width: 200px;
+  
+  align-self: center;
+}
