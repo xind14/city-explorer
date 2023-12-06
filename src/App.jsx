@@ -36,7 +36,7 @@ function App() {
       setLongitude(response.data[0].lon);
       setError(false);
 
-      getWeather(response.data[0].lat, response.data[0].lon);
+      getWeather(cityName, response.data[0].lat, response.data[0].lon);
 
     } catch (error) {
       setError(error.message);
@@ -47,12 +47,12 @@ function App() {
 
 
 
-  async function getWeather(lat, lon) {
+  async function getWeather(searchQuery, lat, lon) {
     //     console.log(setError);
     try {
       let weatherResponse = await axios.get(
-        `${API}/weather?latitude=${lat}&longitude=${lon}`
-      );
+        `${API}/weather?searchQuery=${searchQuery}&latitude=${lat}&longitude=${lon}`
+        );      
       setWeather(weatherResponse.data);
     } catch (error) {
       console.error("Error fetching weather:", error.message);
@@ -79,7 +79,7 @@ function App() {
         </div>
       )}
       <Map latitude={latitude} longitude={longitude} />
-      <Weather weather={weather || []} />
+      <Weather weather={weather} />
       <Footer />
     </>
   );
