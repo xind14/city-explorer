@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+// import "./CityForm.css";
 import styles from "./cityform.module.css";
 
 //used johns in class demo code
@@ -27,12 +28,13 @@ function CityForm(props) {
   }
 
   return (
-    <>
+    //use styles.name
+  <div className={styles.form}>
       <Form onSubmit={handleSubmit} className='form'>
         <Form.Label>What City Are You In?</Form.Label>
         
         <Form.Control type="text" onChange={handleChange} placeholder="Enter a city" size='lg' />
-  <Button variant="primary" type="submit" className='form-button'>
+  <Button variant="primary" type="submit" className={styles.button}>
         Explore!
       </Button>
 
@@ -42,7 +44,7 @@ function CityForm(props) {
       }
     
 
-    </>
+    </div>
   
   );
 }
