@@ -57,7 +57,8 @@ function Movies(props) {
         <div key={index}>
           <p>Title: {movie.title}</p>
           <p>Overview: {movie.overview}</p>
-          {/* Add other movie details */}
+          <img src= {movie.baseURL}/>       
+                {/* Add other movie details */}
         </div>
       ))}
     </div>
