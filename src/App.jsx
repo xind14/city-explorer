@@ -37,22 +37,17 @@ function App() {
       setError(false);
 
       getWeather(cityName, response.data[0].lat, response.data[0].lon);
-
     } catch (error) {
       setError(error.message);
     }
   }
-
-
-
-
 
   async function getWeather(searchQuery, lat, lon) {
     //     console.log(setError);
     try {
       let weatherResponse = await axios.get(
         `${API}/weather?searchQuery=${searchQuery}&latitude=${lat}&longitude=${lon}`
-        );      
+      );
       setWeather(weatherResponse.data);
     } catch (error) {
       console.error("Error fetching weather:", error.message);
