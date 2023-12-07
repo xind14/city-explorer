@@ -12,7 +12,7 @@ function Weather(props) {
     <Row  sm={1} md={1} lg={5} className={styles.weather}>
       {props.weather.forecast &&
         props.weather.forecast.map((forecast, idx) => {
-          console.log("Forecast data:", forecast); // Add this line
+          // console.log("Forecast data:", forecast); // Add this line
           return (
             <Col key={idx} className={styles.day} >
               <Card className={styles.card}>
