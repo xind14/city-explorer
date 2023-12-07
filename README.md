@@ -120,7 +120,7 @@ REACT, JavaScript, Bootstrap, CSS, APIs, Axios and are used.
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-[Johns In Class Demo](https://github.com/codefellows/seattle-code-301d110/tree/main/class-06/demo/city-explorer)
+[Johns In Class Demo](https://github.com/codefellows/seattle-code-301d110/tree/main/class-07/demo/city-explorer)
 
 Monday: Chris Acosta
 ![Whiteboard Img](src/assets/whiteboard.png)
@@ -151,3 +151,103 @@ Monday: Chris Acosta
 
 1. How long you spent working on this assignment.
   - Almost 10 hrs and still not done.
+
+
+
+
+
+  ## Lab 08
+
+**Author**: Xin Deng
+**Version**: 1.0.2 (increment the patch/fix version number if you make more commits past your first submission)
+
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+Building a City Finder that displays the forecast by using API
+
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+- Create different components of the app
+- Connect to API
+- Create functions in to get and display API data
+- Connect to backend 
+
+
+
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+REACT, JavaScript, Bootstrap, CSS, APIs, Axios and are used.
+
+## Change Log
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+
+- 12-05-2023 11:32pm - Application now has weather files 
+
+
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+[Johns In Class Demo](https://github.com/codefellows/seattle-code-301d110/tree/main/class-08/demo/city-explorer)
+
+Monday: Chris Acosta
+![Whiteboard Img](src/assets/whiteboard.png)
+
+Tuesday: Brendan, Steph
+![Whiteboard Img](src/assets/whiteboard2.png)
+
+Wednesday: Self
+![Whiteboard Img](src/assets/whiteboard3.png)
+
+
+
+
+
+## Time Estimates
+
+1. Number and name of feature: Feature #1: Weather (live): As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
+    - Estimate of time needed to complete: 3 hrs
+    - Start time: 2:30pm
+    - Finish time: 11:32pm
+    - Actual time needed to complete: 8 hrs and still not done
+
+1. Number and name of feature: Feature #2: Movies: As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination. how to pack for an upcoming trip.longitude of that location.
+    - Estimate of time needed to complete: 3 hrs
+    - Start time: 2:30pm
+    - Finish time: 11:32pm
+    - Actual time needed to complete: 8 hrs and still not done
+
+1. Number and name of feature: Feature #3:Publish: Deploy your server. As a user, I want to access the City Explorer application on the web, so that anyone can explore from anywhere.
+    - Estimate of time needed to complete: 3 hrs
+    - Start time: 2:30pm
+    - Finish time: 11:32pm
+    - Actual time needed to complete: 8 hrs and still not done
+
+
+
+
+## Lighthouse Accessibility Report Score
+
+![Lighthouse report for Lab 8](src/assets/lighthouse3.png)
+
+### Reflections and Comments
+
+1. A link to the deployed version of your latest code.
+1. A link to your public Trello board.
+1. A question within the context of this lab assignment.
+    - I still not sure how to debug backend and front end at the same time. Localhost, api is still so confusing
+1. An observation about the lab assignment, or related ‘Ah-hah!’ moment.
+    - When Tammy help me figure out what to get from the nested data.
+
+1. How long you spent working on this assignment.
+  - Almost 10 hrs and still not done.
+
+
+
+
+  lsof -i :3000 = error address already in use
+  kill -9 <PID>
+  npx kill-port 3000
