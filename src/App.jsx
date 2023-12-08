@@ -14,10 +14,6 @@ import Movies from "./components/Movies/Movies.jsx";
 import Error from "./components/Error/Error.jsx";
 import Weather from "./components/Weather/Weather.jsx";
 
-
-
-
-
 const CITY_API_KEY = import.meta.env.VITE_API_KEY;
 
 
@@ -29,6 +25,11 @@ function App() {
   const [longitude, setLongitude] = useState(null);
   const [error, setError] = useState(false);
   const [movies, setMovies] = useState([]);
+
+  const [searchedCity, setSearchedCity] = useState('');
+
+
+
 
   async function getLocation(cityName) {
     console.log(setError);
@@ -75,7 +76,7 @@ function App() {
 
       <CityForm
         city={city}
-        handleChangeCity={changeCity}
+        handleSubmit={changeCity}
         latitude={latitude}
         longitude={longitude}
       />

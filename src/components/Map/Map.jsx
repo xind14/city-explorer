@@ -3,12 +3,13 @@ import React, {useState} from 'react';
 import styles from './map.module.css';
 
 
+
+
+
+
 import {When} from 'react-if';
 
 import Figure from 'react-bootstrap/Figure';
-
-
-
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 

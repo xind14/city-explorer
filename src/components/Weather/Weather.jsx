@@ -38,7 +38,7 @@ useEffect(() => {
     try {
         let weatherObject =  {
           params: {
-            searchQuery: props.search,
+            searchQuery: props.searchedCity,
             latitude: props.lat,
             longitude: props.lon,
           }
@@ -53,7 +53,7 @@ useEffect(() => {
   }
 
   fetchWeather();
-}, [props.search, props.lat, props.lon]);
+}, [props.searchCity, props.lat, props.lon]);
 
   return (
     <Container>
