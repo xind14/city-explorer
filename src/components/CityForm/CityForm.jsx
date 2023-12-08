@@ -29,7 +29,8 @@ function CityForm(props) {
 
   return (
     //use styles.name
-  <div className={styles.form}>
+    <>
+      <div className={styles.form}>
       <Form onSubmit={handleSubmit} className='form'>
         <Form.Label>What City Are You In?</Form.Label>
         
@@ -39,12 +40,19 @@ function CityForm(props) {
       </Button>
 
     </Form>
-    {
-        showHeading && props.city && <h2 style={{ fontSize: '25px' }} > Information about {props.city} Below</h2>
-      }
+  
     
 
     </div>
+    <div>
+
+       {
+        showHeading && props.city && <h2 style={{ fontSize: '25px' }} > Information about {props.city} Below</h2>
+      } 
+    </div>
+    </>
+
+    
   
   );
 }

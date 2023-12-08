@@ -5,9 +5,22 @@
   text-align: center;
   width: 50%;
 padding: 20px;
-
-}
+border: 2px solid black; */
+  /* text-align: center;
+} */
 
 .figure-img {
   width: 100%;
-} */
+} 
+
+
+.mapSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caption {
+  
+}
+

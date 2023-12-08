@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Movie from './Movie'; // Import the Movie component
-import styles from './movies.module.css';
+import Movie from './Movie';
+// import styles from './movies.module.css';
 
 function Movies(props) {
   const { movies, handleGetMovies } = props;

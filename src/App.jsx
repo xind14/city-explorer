@@ -79,26 +79,34 @@ function App() {
     <>
       <Header />
       <Error error={error} onClose={() => setError(false)} />
-
+  
       <CityForm
         city={city}
         handleChangeCity={changeCity}
         latitude={latitude}
         longitude={longitude}
       />
-      {latitude !== null && longitude !== null && (
-        <div>
-          <p>
-            Latitude: {latitude}, Longitude: {longitude}
-          </p>
-        </div>
-      )}
-      <Map latitude={latitude} longitude={longitude} />
-      <Weather weather={weather} />
-      <Movies movies={movies} handleGetMovies={getMovies}/>
+  
+      <div className="mapSection">
+        {latitude !== null && longitude !== null && (
+          <div>
+            <p>
+              Latitude: {latitude}, Longitude: {longitude}
+            </p>
+          </div>
+        )}
+        <Map latitude={latitude} longitude={longitude} />
+      </div>
+  <div>
+    
+      <Weather weather={weather} className="weatherSection"/>
+
+  </div>
+    
+
+      <Movies movies={movies} handleGetMovies={getMovies} className="moviesSection"/>
       <Footer />
     </>
   );
-}
-
-export default App;
+  }
+  export default App

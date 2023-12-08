@@ -1,14 +1,32 @@
-.weather {
+.weatherSection {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background-color: aqua; */
   height: 200px;
   align-content: center;
 }
 
 .card{
-  width: 200px;
+  /* width: 200px;
   
-  align-self: center;
+
+    font-family: sans-serif;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px 3px #757575;
+  height: 100%;
+  width: 100%;
+  align-self: center; */
+}
+
+
+
+.forecast{
+
+
+}
+
+.dayforecast{
+
+  
 }

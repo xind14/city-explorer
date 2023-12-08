@@ -14,7 +14,7 @@ function Movie({ title, overview, poster_path }) {
           className={styles.carouselImage}
         />
 
-        <Carousel.Caption>
+        <Carousel.Caption className={styles.carouselCaption}>
           <h3>{title}</h3>
           <p>{overview}</p>
         </Carousel.Caption>
