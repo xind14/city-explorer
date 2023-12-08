@@ -10,20 +10,21 @@ import styles from "./cityform.module.css";
 
 function CityForm(props) {
 
-  const [searchedCity, setSearchedCity] = useState('');
+  const [typedInCity, setTypedInCity] = useState('');
   const [showHeading, setShowHeading] = useState(false);
 
   function handleChange(event) {
     console.log('handleChange called');
     setShowHeading(false);
-    setSearchedCity( event.target.value );
+    setTypedInCity( event.target.value );
   }
 
   function handleSubmit(event) {
     event.preventDefault();
        console.log(handleSubmit);
+ 
     setShowHeading(true);
-    props.handleSubmit(searchedCity);
+    props.handleChangeCity(typedInCity);
   }
 
   return (

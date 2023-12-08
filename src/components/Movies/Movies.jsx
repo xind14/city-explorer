@@ -30,39 +30,15 @@
 
 
 
-import React, { useEffect, useState } from "react";
+
+import React from 'react';
 import PropTypes from 'prop-types'; 
+function Movies(props) {
+  const { movies, handleGetMovies } = props;
 
-import axios from "axios";
-const SERVER = import.meta.env.VITE_API_URL;
-
-
-function Movies (props) {
-  const { movie, handleGetMovies, search } = props;
-
-
-  useEffect(() => {
-    async function fetchMovies(city) {
-      try {
-        let movieResponse = await axios.get(`${SERVER}/movies?city=${city}`);
-        console.log(movieResponse);
-        setMovies(movieResponse.data);
-      } catch (error) {
-        console.error("Error fetching movies:", error.message);
-      }
-    }
-  
-    // change to props.search later when app is set up
-    if (search) {
-      fetchMovies(search);
-    }
-  }, [search]);
-  
-const [movies, setMovies] = useState([]);
   // Check if movies data is available
   if (movies.length === 0) {
-
-    //debugging tool below will change to carousel above later 
+    // If no movies data, you can display a loading message or trigger a fetch
     return (
       <div>
         <p>Loading movies...</p>
@@ -96,10 +72,10 @@ Movies.propTypes = {
       vote_count: PropTypes.number,
       poster_path: PropTypes.string,
       popularity: PropTypes.number,
-      release_date: PropTypes.string,        })
+      release_date: PropTypes.string,       
+    })
   ),
   handleGetMovies: PropTypes.func,
-  search:PropTypes.string,
 };
 
 export default Movies;
