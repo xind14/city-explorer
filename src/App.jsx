@@ -20,7 +20,6 @@ import Weather from "./components/Weather/Weather.jsx";
 
 const CITY_API_KEY = import.meta.env.VITE_API_KEY;
 
-const SERVER = import.meta.env.VITE_API_URL;
 
 console.log(CITY_API_KEY);
 
@@ -28,7 +27,6 @@ function App() {
   const [city, setCity] = useState("");
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  const [weather, setWeather] = useState([]);
   const [error, setError] = useState(false);
   const [movies, setMovies] = useState([]);
 
@@ -50,17 +48,6 @@ function App() {
     }
   }
 
-  async function getWeather(searchQuery, lat, lon) {
-    //     console.log(setError);
-    try {
-      let weatherResponse = await axios.get(
-        `${SERVER}/weather?searchQuery=${searchQuery}&latitude=${lat}&longitude=${lon}`
-      );
-      setWeather(weatherResponse.data);
-    } catch (error) {
-      console.error("Error fetching weather:", error.message);
-    }
-  }
 
   async function getMovies(city) {
     //     console.log(setError);
