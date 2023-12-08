@@ -1,6 +1,11 @@
 //used johns in class demo code
 import React, {useState} from 'react';
 import styles from './map.module.css';
+import axios from "axios";
+
+// const [city, setCity] = useState("");
+// const [latitude, setLatitude] = useState(null);
+// const [longitude, setLongitude] = useState(null);
 
 
 

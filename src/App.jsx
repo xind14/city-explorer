@@ -4,8 +4,6 @@ import axios from "axios";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-
 import Header from "./components/Header/Header.jsx";
 import CityForm from "./components/CityForm/CityForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -16,7 +14,6 @@ import Weather from "./components/Weather/Weather.jsx";
 
 const CITY_API_KEY = import.meta.env.VITE_API_KEY;
 
-
 console.log(CITY_API_KEY);
 
 function App() {
@@ -24,12 +21,9 @@ function App() {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [error, setError] = useState(false);
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
 
-  const [searchedCity, setSearchedCity] = useState('');
-
-
-
+  const [searchedCity, setSearchedCity] = useState("");
 
   async function getLocation(cityName) {
     console.log(setError);
@@ -43,29 +37,29 @@ function App() {
       setLongitude(response.data[0].lon);
       // setError(false);
 
-      getWeather(cityName, response.data[0].lat, response.data[0].lon);
+      fetchWeather(cityName, response.data[0].lat, response.data[0].lon);
     } catch (error) {
       setError(error.message);
     }
   }
 
 
-  async function getMovies(city) {
-    //     console.log(setError);
-    try {
 
-      let movieResponse = await axios.get(`${SERVER}/movies?city=${city}`);
-                  console.log(movieResponse);
 
-      setMovies(movieResponse.data);
-    } catch (error) {
-      console.error("Error fetching weather:", error.message);
-    }
-  }
+  // async function getMovies(city) {
+  //   try {
+  //     let movieResponse = await axios.get(`${SERVER}/movies?city=${city}`);
+  //     console.log(movieResponse);
+
+  //     setMovies(movieResponse.data);
+  //   } catch (error) {
+  //     console.error("Error fetching weather:", error.message);
+  //   }
+  // }
 
   function changeCity(newCity) {
     getLocation(newCity);
-    getMovies(newCity);
+    fetchMovies(newCity);
     console.log("Changing to", newCity);
   }
 
@@ -89,7 +83,7 @@ function App() {
       )}
       <Map latitude={latitude} longitude={longitude} />
       <Weather weather={weather} />
-      <Movies movies={movies} handleGetMovies={getMovies}/>
+      <Movies movies={movies} handleGetMovies={fetchMovies} />
       <Footer />
     </>
   );
