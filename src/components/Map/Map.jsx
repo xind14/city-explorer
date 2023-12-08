@@ -1,14 +1,20 @@
 //used johns in class demo code
 import React, {useState} from 'react';
 import styles from './map.module.css';
+import axios from "axios";
+
+// const [city, setCity] = useState("");
+// const [latitude, setLatitude] = useState(null);
+// const [longitude, setLongitude] = useState(null);
+
+
+
+
 
 
 import {When} from 'react-if';
 
 import Figure from 'react-bootstrap/Figure';
-
-
-
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
