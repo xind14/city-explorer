@@ -1,3 +1,41 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Movie from './Movie'; // Import the Movie component
+import styles from './movies.module.css';
+
+function Movies(props) {
+  const { movies, handleGetMovies } = props;
+
+  return (
+    <>
+      {movies.map((movie, index) => (
+        <Movie
+          key={index}
+          title={movie.title}
+          overview={movie.overview}
+          poster_path={movie.poster_path}
+        />
+      ))}
+    </>
+  );
+}
+
+Movies.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      overview: PropTypes.string,
+      vote_average: PropTypes.number,
+      vote_count: PropTypes.number,
+      poster_path: PropTypes.string,
+      popularity: PropTypes.number,
+      release_date: PropTypes.string,
+    })
+  ),
+  handleGetMovies: PropTypes.func,
+};
+
+export default Movies;
 
 
 
