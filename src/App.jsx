@@ -1,6 +1,11 @@
 //used johns in class demo code
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
 import Header from "./components/Header/Header.jsx";
 import CityForm from "./components/CityForm/CityForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -8,9 +13,10 @@ import Map from "./components/Map/Map.jsx";
 import Movies from "./components/Movies/Movies.jsx";
 import Error from "./components/Error/Error.jsx";
 import Weather from "./components/Weather/Weather.jsx";
-import "./App.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
 
 const CITY_API_KEY = import.meta.env.VITE_API_KEY;
 
