@@ -1,26 +1,102 @@
 
+ 
 
-.carousel{
+
+/* .carousel{
+width:500px;
+
+} */
+.movieCarousel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:-webkit-center;
+  border: pink solid 20px;
+  width: -webkit-fill-available;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  height: 100%;
 
 
 }
-
 .carouselImage{
-
+width: 500px;
+border: black solid 20px
   
 }
 
+/* .carousel.slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+height: 200px;
+position: relative;
+border: red solid 20px!important;
+}
 
 .carouselCaption{
+color: red !important;
+background: beige;
+width: 500px;
+justify-content: center;
+border: green solid 20px
 
 }
 
 h3{
-
+font-size: 50px;
 
 }
 
 p{
+font-size: 20px;
+}
+
+.carousel-slide {
+  width: 600px;
+  border: blue solid 20px
+}
+
+.carousel-indicators {
+  width: 700px;
+  border: yellow solid 20px;
+  display: flex;
+  display: flex;
+}
+
+
+.carousel-control-next {
+  border: purple solid 20px!important;
+  display: contents;
+  position: fixed;
+  color: aqua;
+  position: relative;
+  width: 200px!important;
+
 
 }
 
+.carousel-control-prev {
+  border: purple solid 20px;
+  display: flex;
+  position: fixed;
+  color: aqua!important;
+  position: relative;
+  width: 20px!important;
+
+
+}
+
+.carousel-inner {
+
+  border: purple solid 20px!important;
+  display: contents;
+  position: fixed;
+  color: aqua;
+}

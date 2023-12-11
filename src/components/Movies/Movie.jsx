@@ -2,31 +2,46 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import PropTypes from 'prop-types';
-import styles from './movies.module.css';
+import styles from './movie.module.css';
 
-function Movie({ title, overview, poster_path }) {
+
+
+
+
+
+function Movie({ movies}) {
   return (
-    <Carousel className={styles.carousel}>
-      <Carousel.Item interval={600}>
-        <Image
-          src={`https://image.tmdb.org/t/p/original${poster_path}`}
-          alt={title}
-          className={styles.carouselImage}
-        />
+    <Carousel className={styles.movieCarousel}>
+      {movies.map((movie, index) => (
+        <Carousel.Item key={index} interval={10000} >
+          <Image
+            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            alt={movie.title}
+            className={styles.carouselImage}
+          />
 
-        <Carousel.Caption className={styles.carouselCaption}>
-          <h3>{title}</h3>
-          <p>{overview}</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+          <Carousel.Caption className={styles.carouselCaption}>
+            <h3>{movie.title}</h3>
+            <p>{movie.overview}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }
 
 Movie.propTypes = {
-  title: PropTypes.string,
-  overview: PropTypes.string,
-  poster_path: PropTypes.string,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      overview: PropTypes.string,
+      vote_average: PropTypes.number,
+      vote_count: PropTypes.number,
+      poster_path: PropTypes.string,
+      popularity: PropTypes.number,
+      release_date: PropTypes.string,
+    })
+  ),
 };
 
 export default Movie;

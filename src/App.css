@@ -11,6 +11,15 @@ body {
   background-color: antiquewhite!important;
 }
 
+.moviesSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: purple solid 20px!important;
+width: 100%;
+
+}
+
 
 /* 
 .weatherSection {

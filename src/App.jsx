@@ -97,14 +97,17 @@ function App() {
         )}
         <Map latitude={latitude} longitude={longitude} />
       </div>
-  <div>
+  <div className="weatherSection">
     
-      <Weather weather={weather} className="weatherSection"/>
+      <Weather weather={weather} />
 
   </div>
     
+<div className="moviesSection">
 
-      <Movies movies={movies} handleGetMovies={getMovies} className="moviesSection"/>
+   <Movies movies={movies} handleGetMovies={getMovies}/>
+</div>
+     
       <Footer />
     </>
   );

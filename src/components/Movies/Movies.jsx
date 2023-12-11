@@ -1,22 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Movie from './Movie';
-// import styles from './movies.module.css';
+import styles from './movies.module.css';
 
-function Movies(props) {
-  const { movies, handleGetMovies } = props;
-
+function Movies({ movies, handleGetMovies }) {
   return (
-    <>
-      {movies.map((movie, index) => (
-        <Movie
-          key={index}
-          title={movie.title}
-          overview={movie.overview}
-          poster_path={movie.poster_path}
-        />
-      ))}
-    </>
+  
+          <Movie movies={movies} />
+     
+ 
   );
 }
 
